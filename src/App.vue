@@ -3,7 +3,8 @@
     <nav>
       <div class="navbar">
         <div class="container nav-container">
-          <input class="checkbox" type="checkbox" id="nav-toggle" />
+          <!-- Checkbox to control menu -->
+          <input class="checkbox" type="checkbox" id="nav-toggle" v-model="menuOpen" />
           <div class="hamburger-lines">
             <span class="line line1"></span>
             <span class="line line2"></span>
@@ -13,10 +14,9 @@
             <h1>RTG i Nord</h1>
           </div>
           <div class="menu-items">
-            <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/presentations">Presentations</router-link></li>
-            <li><router-link to="/maps">Maps</router-link></li>
-            
+            <li><router-link to="/" @click="closeMenu">Home</router-link></li>
+            <li><router-link to="/presentations" @click="closeMenu">Presentations</router-link></li>
+            <li><router-link to="/maps" @click="closeMenu">Maps</router-link></li>
           </div>
         </div>
       </div>
@@ -26,16 +26,22 @@
 </template>
 
 <script>
+import { ref } from 'vue';
+
 export default {
-  data() {
-    return {
-      isMenuOpen: false,
+  setup() {
+    // Reactive state for menu
+    const menuOpen = ref(false);
+
+    // Method to close the menu
+    const closeMenu = () => {
+      menuOpen.value = false;
     };
-  },
-  methods: {
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
-    },
+
+    return {
+      menuOpen,
+      closeMenu,
+    };
   },
 };
 </script>
