@@ -1,6 +1,6 @@
 <template>
   <div class="maps">
-    <h1>Helpfull maps</h1>
+    <h1>Helpful maps</h1>
     <div class="maps-container">
       <!-- Map 1 -->
       <div class="map-card">
