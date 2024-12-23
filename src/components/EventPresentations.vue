@@ -2,44 +2,30 @@
   <div class="presentations">
     <h1>Presenters</h1>
     <div class="presenters-container">
-      <div class="presenter-card" v-for="person in presenters" :key="person.id">
-        <img :src="person.image" :alt="person.name" class="presenter-image" />
-        <p class="presenter-name">{{ person.name }}</p>
+      <!-- Hardcoded Person 1 -->
+      <div class="presenter-card">
+        <img src="@/assets/SigneHForsdahl.png" alt="Signe Helene Forsdahl" class="presenter-image" />
+        <p class="presenter-name">Signe Helene Forsdahl</p>
+        <p class="presenter-name">Radiolog, UNN</p>
+
+      </div>
+      
+      <!-- Placeholder Presenters -->
+      <div class="presenter-card">
+        <img src="" alt="Who" class="presenter-image" />
+        <p class="presenter-name">Who</p>
+      </div>
+      <div class="presenter-card">
+        <img src="" alt="Who 2" class="presenter-image" />
+        <p class="presenter-name">Who 2</p>
+      </div>
+      <div class="presenter-card">
+        <img src="" alt="Who 3" class="presenter-image" />
+        <p class="presenter-name">Who 3</p>
       </div>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      presenters: [
-        {
-          id: 1,
-          name: "Signe Helene Forsdahl",
-          image: "@/assets/SigneHForsdahl.jpeg", // Add this image to the assets folder
-        },
-        {
-          id: 2,
-          name: "who",
-          image: "@/assets/erik.png", // Add this image to the assets folder
-        },
-        {
-          id: 3,
-          name: "who 2",
-          image: "@/assets/lena.png", // Add this image to the assets folder
-        },
-        {
-          id: 4,
-          name: "who 3",
-          image: "@/assets/tom.png", // Add this image to the assets folder
-        },
-      ],
-    };
-  },
-};
-</script>
 
 <style>
 .presentations {
