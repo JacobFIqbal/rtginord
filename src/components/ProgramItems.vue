@@ -133,20 +133,30 @@ const activeIdx = ref(0);
 .items{ list-style:none; padding:0; margin:0; display:grid; gap:12px; }
 .item{
   display:grid;
-  grid-template-columns: 12ch 1fr;
-  align-items: stretch;
+  /* Mobile: let time column grow to fit, so it never tucks under the card */
+  grid-template-columns: minmax(10ch, max-content) 1fr;
   gap:14px;
+  align-items:start;          /* mobile: top-align to avoid overlap */
+  isolation:isolate;          /* keep time above card shadow if close */
 }
-@media (max-width:720px){
-  .item{ grid-template-columns: 84px 1fr; }
+@media (min-width: 720px){
+  .item{
+    grid-template-columns: 12ch 1fr;
+    align-items:center;       /* center both cells vertically */
+  }
+  .time{
+    align-items:center;       /* center the timestamp text */
+    align-self:center;        /* center within its grid area */
+  }
 }
 .time{
-  display:flex; align-items:center; justify-content:flex-start;
-  color: color-mix(in srgb, var(--navy) 65%, white);
-  font-weight: 600;
-  white-space: nowrap;              /* <- viktig: ikke bryt linje */
-  word-break: keep-all;             /* unngå brudd rundt en-dash */
-  font-variant-numeric: tabular-nums;
+  display:flex;
+  align-items:flex-start;     /* mobile: align to top edge of card */
+  justify-content:flex-start;
+  white-space:nowrap;
+  word-break:keep-all;
+  font-variant-numeric:tabular-nums;
+  z-index:1;
 }
 .card{
   position: relative;               /* for accent-stripen */
@@ -186,12 +196,13 @@ const activeIdx = ref(0);
 
 /* Sosialt: Middag */
 /* Sosialt: Middag – litt mer blå */
-.item[data-type="social"] .card{
-  background: color-mix(in srgb, var(--teal) 32%, white);
-  border-color: color-mix(in srgb, var(--teal) 62%, var(--border));
+.item[data-type="social"] .card {
+  background: color-mix(in srgb, var(--teal) 55%, white);
+  border-color: color-mix(in srgb, var(--teal) 85%, var(--border));
 }
-.item[data-type="social"] .card::before{
-  background: color-mix(in srgb, var(--teal) 80%, white);
+
+.item[data-type="social"] .card::before {
+  background: color-mix(in srgb, var(--teal) 90%, white);
 }
 
 /* Avslutning mv. kan fortsatt være subtilt */
