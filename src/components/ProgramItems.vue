@@ -133,30 +133,28 @@ const activeIdx = ref(0);
 .items{ list-style:none; padding:0; margin:0; display:grid; gap:12px; }
 .item{
   display:grid;
-  /* Mobile: let time column grow to fit, so it never tucks under the card */
-  grid-template-columns: minmax(10ch, max-content) 1fr;
+  /* Mobil: tidsspalten kan utvide seg så den ikke havner under kortet */
+  grid-template-columns: minmax(11ch, max-content) 1fr;
   gap:14px;
-  align-items:start;          /* mobile: top-align to avoid overlap */
-  isolation:isolate;          /* keep time above card shadow if close */
+  align-items:center;        /* <- midtstiller vertikalt for begge celler */
+  isolation:isolate;
 }
+
+/* Tablet/Desktop: fast bredde på tidsspalten */
 @media (min-width: 720px){
-  .item{
-    grid-template-columns: 12ch 1fr;
-    align-items:center;       /* center both cells vertically */
-  }
-  .time{
-    align-items:center;       /* center the timestamp text */
-    align-self:center;        /* center within its grid area */
-  }
+  .item{ grid-template-columns: 12ch 1fr; }
 }
+
 .time{
   display:flex;
-  align-items:flex-start;     /* mobile: align to top edge of card */
+  align-items:center;        /* <- midtstiller selve klokkeslettet */
   justify-content:flex-start;
+  align-self:stretch;        /* fyll hele radens høyde for perfekt center */
+  height:100%;
   white-space:nowrap;
   word-break:keep-all;
   font-variant-numeric:tabular-nums;
-  z-index:1;
+  z-index:1;                 /* over kortskygge hvis de kommer tett */
 }
 .card{
   position: relative;               /* for accent-stripen */
