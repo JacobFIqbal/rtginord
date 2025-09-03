@@ -66,7 +66,7 @@ const days = [
     id: 'dag-1',
     label: 'Dag 1 – Torsdag 23.10.25',
     items: [
-      { start: '11:00', end: '12:00', title: 'Oppmøte og lunsj', note: 'Linken møtesenter (Sykehusvegen 23)', type: 'meal' },
+      { start: '11:00', end: '12:00', title: 'Oppmøte og lunsj', note: 'Linken møtesenter (Sykehusvegen 23), Auditorium: "Jiehkkevarri"', type: 'meal' },
       { start: '12:00', end: '12:05', title: 'Velkommen', speakers: [{ name: 'Signe Forsdahl', aff: 'Radiolog, leder av RTG i Nord, UNN' }] },
       { start: '12:05', end: '13:00', title: 'Presentasjon av Rtg-avdelingene i Nord-Norge', speakers: [{ name: 'Radiologer fra de ulike sykehusene' }] },
       { start: '13:00', end: '13:45', title: 'Bildediagnostikk ved mistanke om påført hodeskade: Hva? Hvor? Når? Hvem?', speakers: [{ name: 'Stein-Magnus Aukland', aff: 'Barneradiolog, Haukeland sykehus' }] },

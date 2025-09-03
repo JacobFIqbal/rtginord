@@ -22,4 +22,11 @@
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+
+@media (max-width: 900px) {
+  .homepage-image {
+    max-width: 100%; /* Allows the image to fill its container */
+  }
+}
   </style>
