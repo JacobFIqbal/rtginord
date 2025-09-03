@@ -1,8 +1,9 @@
 <template>
     <div class="home">
       <img src="@/assets/PenguinCT.png" alt="Penguin Radiologist with CT Machine" class="homepage-image" />
-      <h1>Welcome to RTG i Nord</h1>
-      <p>This seminar is hosted by leading radiologists to discuss advancements in the field.</p>
+      <h1>Velkommen til Røntgen i Nord</h1>
+      <h2>Tromsø 23.-24. oktober 2025</h2>
+      <p>Et møte for å styrke fag og samarbeid mellom røntgenavdelingene i Nord Norge</p>
     </div>
   </template>
   
@@ -18,7 +19,7 @@
   max-height: 50%;
   height: auto;
   margin-bottom: 20px;
-  margin-top: 5%;
+  margin-top: 1%;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }

@@ -10,7 +10,6 @@
         <nav class="primary-nav" aria-label="Primary">
           <ul class="nav-list">
             <li><router-link class="nav-link" to="/">Home</router-link></li>
-            <li><router-link class="nav-link" to="/presentations">Presentations</router-link></li>
             <li><router-link class="nav-link" to="/maps">Maps</router-link></li>
             <li><router-link class="nav-link" to="/program">Program</router-link></li>
           </ul>
@@ -43,7 +42,6 @@
         </div>
         <ul class="drawer-links">
           <li><router-link class="drawer-link" to="/" @click="closeMenu">Home</router-link></li>
-          <li><router-link class="drawer-link" to="/presentations" @click="closeMenu">Presentations</router-link></li>
           <li><router-link class="drawer-link" to="/maps" @click="closeMenu">Maps</router-link></li>
           <li><router-link class="drawer-link" to="/program" @click="closeMenu">Program</router-link></li>
         </ul>
