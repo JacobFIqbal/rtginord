@@ -176,13 +176,12 @@ body{ margin:0; color:var(--navy);
   .nav-toggle{ display:inline-block; }
 }
 
-/* ===== NY, LETT OG ELEGANT FOOTER-STIL ===== */
 .site-footer{
   margin-top:auto;             
-  border-top: 1px solid var(--border); /* Samme ramme som headeren for konsistens */
-  /* Lett og subtil blå-aktig gradient laget fra temafargene dine */
-  background: linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--navy) 4%, transparent) 100%);
-  color: var(--navy); /* Mørk tekstfarge for god lesbarhet */
+  border-top: 1px solid var(--border);
+  /* FIKS: Gradienten er nå 100% dekkende ved å mikse med --bg i stedet for transparent */
+  background: linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--navy) 4%, var(--bg)) 100%);
+  color: var(--navy);
 }
 
 .footer-inner{
