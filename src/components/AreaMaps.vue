@@ -3,15 +3,18 @@
     <!-- Kort for bussruter -->
     <div class="info-card">
       <h2>Relevante bussruter</h2>
+      <p class="bus-caption">Fra UNN er det ca. 5 minutter gange til Linken møtesenter.</p>
+      
       <div class="bus-routes-container">
         <!-- Bussrute 1 -->
         <div class="bus-route-card">
-          <p class="bus-caption">Bussrute eksempel fra Tromsø Lufthavn til UNN</p>
+          <p class="bus-caption">Bussrute eksempel fra Tromsø Lufthavn til UNN.</p>
+        
           <img src="@/assets/buss_flyplass_til_unn.png" alt="Bussrute fra flyplass til UNN" class="bus-image" />
         </div>
         <!-- Bussrute 2 -->
         <div class="bus-route-card">
-          <p class="bus-caption">Bussrute eksempel fra Tromsø Sentrum til UNN</p>
+          <p class="bus-caption">Bussrute eksempel fra Tromsø Sentrum til UNN.</p>
           <img src="@/assets/buss_sentrum_til_unn.png" alt="Bussrute fra sentrum til UNN" class="bus-image" />
         </div>
       </div>

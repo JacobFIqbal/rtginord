@@ -9,8 +9,8 @@
 
         <nav class="primary-nav" aria-label="Primary">
           <ul class="nav-list">
-            <li><router-link class="nav-link" to="/">Home</router-link></li>
-            <li><router-link class="nav-link" to="/maps">Maps</router-link></li>
+            <li><router-link class="nav-link" to="/">Hjem</router-link></li>
+            <li><router-link class="nav-link" to="/maps">Kart</router-link></li>
             <li><router-link class="nav-link" to="/program">Program</router-link></li>
           </ul>
         </nav>
@@ -41,8 +41,8 @@
           <button class="close" @click="closeMenu" aria-label="Close menu">×</button>
         </div>
         <ul class="drawer-links">
-          <li><router-link class="drawer-link" to="/" @click="closeMenu">Home</router-link></li>
-          <li><router-link class="drawer-link" to="/maps" @click="closeMenu">Maps</router-link></li>
+          <li><router-link class="drawer-link" to="/" @click="closeMenu">Hjem</router-link></li>
+          <li><router-link class="drawer-link" to="/maps" @click="closeMenu">Kart</router-link></li>
           <li><router-link class="drawer-link" to="/program" @click="closeMenu">Program</router-link></li>
         </ul>
       </aside>
