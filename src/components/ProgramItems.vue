@@ -87,7 +87,7 @@ const days = [
       { start: '08:30', end: '09:00', title: 'MRI Safety', speakers: [{ name: 'Marthe Bergland', aff: 'MR-radiograf, UNN' }] },
       { start: '09:00', end: '09:15', title: 'Akutt abdomen – bildediagnostikk', speakers: [{ name: 'Gunnar Oltmanns', aff: 'Abdomenradiolog, UNN' }] },
       { start: '09:15', end: '09:30', title: 'Leverfunn etter ablasjon', speakers: [{ name: 'Gunnar Oltmanns', aff: 'Abdomenradiolog, UNN' }] },
-      { start: '09:35', end: '10:00', title: 'Barneradiologi', speakers: [{ name: 'Karen Rosendahl', aff: 'Barneradiolog, UNN' }] },
+      { start: '09:35', end: '10:00', title: 'Barneradiologi i nord; hvorfor, hva og hvem', speakers: [{ name: 'Karen Rosendahl', aff: 'Barneradiolog, UNN' }] },
       { start: '10:00', end: '10:15', title: 'Kaffe & frukt', type: 'break', badge: 'Pause' },
       { start: '10:15', end: '10:45', title: 'Retningslinjer for trombolyse og trombektomi', speakers: [{ name: 'Jon Andre Totland', aff: 'Nevro- og intervensjonsradiolog, UNN' }] },
       {
