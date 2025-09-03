@@ -1,5 +1,6 @@
 <template>
   <div id="app" :class="{ 'menu-open': menuOpen }">
+    <!-- Header og resten av innholdet er uendret -->
     <header class="site-header">
       <div class="container header-inner">
         <router-link to="/" class="brand" @click="closeMenu" aria-label="Go to home">
@@ -52,7 +53,7 @@
       <router-view />
     </main>
 
-
+    <!-- Original, enkel footer-struktur -->
     <footer class="site-footer">
       <div class="container footer-inner">
         <p>© {{ year }} RTG i Nord</p>
@@ -61,6 +62,7 @@
   </div>
 </template>
 
+<!-- Script er uendret -->
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
@@ -69,7 +71,6 @@ const toggleMenu = () => (menuOpen.value = !menuOpen.value);
 const closeMenu = () => (menuOpen.value = false);
 const year = new Date().getFullYear();
 
-// Close on ESC
 const onKey = (e) => {
   if (e.key === 'Escape') closeMenu();
 };
@@ -77,6 +78,8 @@ onMounted(() => window.addEventListener('keydown', onKey));
 onUnmounted(() => window.removeEventListener('keydown', onKey));
 </script>
 
+
+<!-- Style-del med KUN footer-stilen endret -->
 <style>
 :root{
   --mint:#DDF4E7;
@@ -173,18 +176,24 @@ body{ margin:0; color:var(--navy);
   .nav-toggle{ display:inline-block; }
 }
 
-
+/* ===== NY, LETT OG ELEGANT FOOTER-STIL ===== */
 .site-footer{
   margin-top:auto;             
-  border-top:none;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--navy) 90%, white), var(--navy));
-  color:#fff;
+  border-top: 1px solid var(--border); /* Samme ramme som headeren for konsistens */
+  /* Lett og subtil blå-aktig gradient laget fra temafargene dine */
+  background: linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--navy) 4%, transparent) 100%);
+  color: var(--navy); /* Mørk tekstfarge for god lesbarhet */
 }
+
 .footer-inner{
-  min-height:56px;
-  padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
-  display:flex; align-items:center; justify-content:center;
-  text-align:center;
+  min-height: 56px;
+  padding: 15px 20px calc(15px + env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.9rem; /* Litt mindre tekst for et renere utseende */
+  opacity: 0.8; /* Gjør teksten litt mer subtil og elegant */
 }
 
 /* ===== Animations ===== */
